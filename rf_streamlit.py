@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 model = joblib.load('RF_class_best.pkl')
 
 def main():
-    st.title('Machine Learning Model Deployment')
+    st.title('2602141032 - LB09 - Model Deployment')
 
     # Continuous variables
     credit_score = st.number_input('Credit Score', min_value=0, max_value=850)
