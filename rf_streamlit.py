@@ -28,7 +28,7 @@ def main():
         label_encoder = LabelEncoder()
         onehot_encoder = OneHotEncoder()
         # geography_encoded = onehot_encoder.fit_transform([geography])[0]
-        geography_encoded = one_hot_encoder.transform(self.x_train[['Geography']])
+        # geography_encoded = one_hot_encoder.transform(self.x_train[['Geography']])
         gender_encoded = label_encoder.fit_transform([gender])[0]
         # tenure_encoded = label_encoder.fit_transform([tenure])[0]
         has_cr_card_encoded = label_encoder.fit_transform([has_cr_card])[0]
