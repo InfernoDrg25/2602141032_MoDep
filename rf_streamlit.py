@@ -18,7 +18,7 @@ def main():
     # Categorical variables (with placeholders for dropdown menus)
     geography = st.selectbox('Geography', ['Spain', 'France', 'Germany'])  
     gender = st.selectbox('Gender', ['Male', 'Female'])  
-    tenure = st.selectbox('Tenure', [0,1,2,3,4,5,6,7,8,9,10])  
+    tenure = st.selectbox('Tenure', ['0','1','2','3','4','5','6','7','8','9','10'])  
     num_of_products = st.number_input('Number of Products', min_value=1, max_value=4, step=1)
     has_cr_card = st.selectbox('Has Credit Card?', ['Yes', 'No']) 
     is_active_member = st.selectbox('Is Active Member?', ['Yes', 'No'])  
@@ -30,13 +30,13 @@ def main():
         geography_encoded = label_encoder.fit_transform([geography])[0]
         # geography_encoded = one_hot_encoder.transform(self.x_train[['Geography']])
         gender_encoded = label_encoder.fit_transform([gender])[0]
-        # tenure_encoded = label_encoder.fit_transform([tenure])[0]
+        tenure_encoded = label_encoder.fit_transform([tenure])[0]
         has_cr_card_encoded = label_encoder.fit_transform([has_cr_card])[0]
         is_active_member_encoded = label_encoder.fit_transform([is_active_member])[0]
 
         # Create the input features array (ensure correct order); harus sama sesuai dengan urutan input model
         features = [
-            credit_score, geography_encoded, gender_encoded, age, tenure, balance, 
+            credit_score, geography_encoded, gender_encoded, age, tenure_encoded, balance, 
             num_of_products, has_cr_card_encoded, is_active_member_encoded, estimated_salary
         ]
 
