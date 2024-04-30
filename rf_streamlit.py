@@ -36,7 +36,7 @@ def main():
 
         # Create the input features array (ensure correct order); harus sama sesuai dengan urutan input model
         features = [
-            credit_score, geography_encoded, gender_encoded, age, tenure_encoded, balance, 
+            credit_score, geography_encoded, gender_encoded, age, tenure, balance, 
             num_of_products, has_cr_card_encoded, is_active_member_encoded, estimated_salary
         ]
 
