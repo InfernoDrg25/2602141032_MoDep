@@ -27,7 +27,7 @@ def main():
         # Encode categorical variables
         label_encoder = LabelEncoder()
         onehot_encoder = OneHotEncoder()
-        # geography_encoded = onehot_encoder.fit_transform([geography])[0]
+        geography_encoded = label_encoder.fit_transform([geography])[0]
         # geography_encoded = one_hot_encoder.transform(self.x_train[['Geography']])
         gender_encoded = label_encoder.fit_transform([gender])[0]
         # tenure_encoded = label_encoder.fit_transform([tenure])[0]
